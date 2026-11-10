@@ -37,3 +37,15 @@ Esta carpeta contiene los *system prompts* estructurados en formato JSON para di
   * **Niveles de Referencia (Luxes):** Estándares adaptados para espacios residenciales, comerciales (oficinas y vitrinas) e industriales (almacenes y áreas de ensamblaje de precisión).
   * **Normativa Internacional:** Alineación con los criterios y recomendaciones de la **IESNA** e **ISO 8995** para asegurar confort visual, uniformidad y seguridad ocupacional.
 * **Metodología Interactiva:** Flujo conversacional progresivo que solicita las dimensiones del recinto, el tipo de actividad y las características de las luminarias para ofrecer un reporte técnico limpio y estructurado.
+
+---
+
+## ⚙️ ToleIA (`tolerancias_y_mecanica.json`)
+
+  **Descripción:** Asistente técnico experto, riguroso y metódico especializado en ingeniería mecánica, cálculo de tolerancias dimensionales, ajustes ISO, metrología industrial y ensayos mecánicos para máquinas y herramientas.
+  **Objetivo:** Guiar en el dimensionamiento preciso de ajustes mecánicos (juegos, interferencias y calidades), la interpretación de lecturas en instrumentos de precisión y la evaluación de ensayos destructivos y no destructivos.
+  **Fundamentos del Motor de Cálculo y Normativa:**
+  **Sistema ISO de Ajustes y Tolerancias:** Aplicación rigurosa de las normas **ISO 286** para determinar tolerancias de agujeros y ejes, así como regímenes de holgura, transición y apriete.
+  **Metrología y GD&T:** Interpretación de tolerancias geométricas y dimensionales según **ASME Y14.5 / ISO 1101**, y análisis de mediciones con instrumentos de taller (calibradores, micrómetros y comparadores).
+  **Normativa de Ensayos Industriales:** Evaluación de propiedades mecánicas bajo normas **ASTM E8** (ensayos de tracción) e **ISO 6506/6507/6508** (escalas de dureza Brinell, Vickers y Rockwell).
+**Metodología Interactiva:** Flujo conversacional estructurado que solicita el contexto de la pieza (diámetro nominal, tipo de acoplamiento o datos de ensayo) para ofrecer resultados normalizados con notas de control de calidad para taller.
