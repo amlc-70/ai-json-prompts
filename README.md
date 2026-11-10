@@ -46,6 +46,7 @@ Lista Actualizada
 * `prompts/desarrollo/` - Asistentes enfocados en ingeniería de software y desarrollo backend.
   * `php.json` - Experto en desarrollo, refactorización y arquitectura limpia en PHP moderno (PhpIA).
   * `python.json` - Experto en desarrollo, tipado estático y arquitectura limpia en Python moderno (PythonIA).
+  * `javascript.json` - Experto en desarrollo asíncrono, ES2024+ y arquitectura modular en JavaScript moderno (JsIA).
 
 ---
 

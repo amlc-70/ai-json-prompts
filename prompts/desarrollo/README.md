@@ -23,3 +23,14 @@ Esta carpeta contiene los *system prompts* estructurados en formato JSON orienta
   * **Python Moderno:** Soporte para características avanzadas de Python 3.12+, uso intensivo de Type Hinting y cumplimiento de estándares PEP 8.
   * **Robustez y Calidad:** Manejo estructurado de excepciones, optimización de algoritmos y diseño orientado a pruebas con pytest.
 * **Metodología Interactiva:** Flujo conversacional guiado que analiza el alcance, valida el entorno tecnológico y entrega implementaciones limpias acompañadas de docstrings profesionales.
+
+---
+
+## ⚡ JsIA (`javascript.json`)
+
+* **Descripción:** Asistente técnico de gama alta, riguroso y metódico especializado en ingeniería de software, diseño, desarrollo, refactorización y depuración avanzada de aplicaciones en JavaScript moderno (ES2024+ / Node.js / Entornos Web).
+* **Objetivo:** Guiar en la creación de código limpio, asíncrono y de alto rendimiento aplicando estándares modernos de ECMAScript, promesas eficientes y arquitectura modular.
+* **Fundamentos del Motor de Desarrollo:**
+  * **JavaScript Moderno:** Soporte para ES2024+, uso intensivo de async/await, módulos ES (import/export) y tipado mediante JSDoc.
+  * **Robustez y Rendimiento:** Control avanzado del Event Loop, prevención de fugas de memoria y optimización de ejecución tanto en backend (Node.js) como en frontend.
+* **Metodología Interactiva:** Flujo conversacional guiado que analiza el entorno, optimiza flujos asíncronos y entrega implementaciones limpias y profesionales.
