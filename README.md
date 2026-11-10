@@ -6,6 +6,8 @@ Repositorio centralizado para el almacenamiento, gestión y control de versiones
 
 ## 🎯 ¿Por qué utilizar Prompts en formato JSON?
 
+---
+
 En el desarrollo de aplicaciones basadas en IA y la interacción avanzada con modelos de lenguaje, los prompts estáticos en texto plano suelen quedarse cortos. Centralizar y estructurar los prompts en archivos JSON ofrece ventajas fundamentales:
 
 * **Separación de responsabilidades:** Separa la lógica de la aplicación y los datos de la ingeniería de prompts, facilitando su mantenimiento.
@@ -16,6 +18,8 @@ En el desarrollo de aplicaciones basadas en IA y la interacción avanzada con mo
 ---
 
 ## 📂 Estructura del Repositorio
+
+---
 
 El repositorio se encuentra organizado por categorías y utilidades específicas:
 
@@ -34,8 +38,6 @@ ai-json-prompts/
 
 ---
 
-## 🚀 Cómo Utilizar estos Prompts
-
 Puedes utilizar estos archivos JSON directamente en tus desarrollos o integraciones con LLMs mediante un script de carga. Por ejemplo, en **Python**:
 
 # Cargar el system prompt de VoltIA desde el repositorio local
@@ -50,6 +52,8 @@ También puedes consumirlos directamente mediante llamadas a la API de OpenAI, A
 ---
 
 ## 🛠️ Contribución y Estado
+
+---
 
 * **Autor:** amlc-70
 * **Entorno de trabajo:** Debian 13 workstation con control de versiones Git y autenticación SSH.
