@@ -45,6 +45,7 @@ Lista Actualizada
   * `filofax_asistente_organizacion.json` - Experto en planificación, agendas y sincronización Keep/Calendar (FilofaxIA).
 * `prompts/desarrollo/` - Asistentes enfocados en ingeniería de software y desarrollo backend.
   * `php.json` - Experto en desarrollo, refactorización y arquitectura limpia en PHP moderno (PhpIA).
+  * `python.json` - Experto en desarrollo, tipado estático y arquitectura limpia en Python moderno (PythonIA).
 
 ---
 
