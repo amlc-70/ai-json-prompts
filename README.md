@@ -36,13 +36,15 @@ ai-json-prompts/
 
 Lista Actualizada
 
-  * `prompts/asistentes/` - Asistentes técnicos especializados en cálculos y dimensionamiento.
+* `prompts/asistentes/` - Asistentes técnicos especializados en cálculos y dimensionamiento.
   * `voltia_sistema_fotovoltaico.json` - Experto en sistemas fotovoltaicos y baterías (VoltIA).
   * `elecia_calculos_electricos.json` - Experto en ingeniería eléctrica y Ley de Ohm/Kirchhoff (ElecIA).
   * `lumia_calculo_luminarias.json` - Experto en ingeniería de iluminación y método de los lúmenes (LumIA).
-  * `prompts/creatividad/` - Asistentes enfocados en redacción técnica, documentación y gestión del tiempo.
+* `prompts/creatividad/` - Asistentes enfocados en redacción técnica, documentación y gestión del tiempo.
   * `docu_asistente_tecnico.json` - Experto en redacción de manuales y especificaciones técnicas (DocuIA).
   * `filofax_asistente_organizacion.json` - Experto en planificación, agendas y sincronización Keep/Calendar (FilofaxIA).
+* `prompts/desarrollo/` - Asistentes enfocados en ingeniería de software y desarrollo backend.
+  * `php.json` - Experto en desarrollo, refactorización y arquitectura limpia en PHP moderno (PhpIA).
 
 ---
 
