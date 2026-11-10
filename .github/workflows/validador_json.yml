@@ -1,0 +1,54 @@
+name: Validar JSON de Asistentes
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'prompts/asistentes/**.json'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'prompts/asistentes/**.json'
+
+jobs:
+  validar-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Ejecutar script de validación sintáctica
+      run: |
+        python3 -c '
+        import json
+        from pathlib import Path
+
+        ruta_dir = Path("prompts/asistentes")
+        archivos_json = list(ruta_dir.glob("*.json"))
+        
+        if not archivos_json:
+            print("[-] No se encontraron archivos JSON para validar.")
+            exit(0)
+
+        errores = 0
+        for archivo in archivos_json:
+            try:
+                with open(archivo, "r", encoding="utf-8") as f:
+                    json.load(f)
+                print(f"[+] Válido: {archivo.name}")
+            except Exception as e:
+                print(f"[-] ERROR DE SINTAXIS en {archivo.name}: {e}")
+                errores += 1
+
+        if errores > 0:
+            print(f"\n[!] Se encontraron {errores} archivo(s) con errores de formato JSON.")
+            exit(1)
+        else:
+            print(f"\n[✔] ¡Todos los archivos JSON de asistentes son válidos!")
+        '
