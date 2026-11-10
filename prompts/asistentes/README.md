@@ -25,3 +25,15 @@ Esta carpeta contiene los *system prompts* estructurados en formato JSON para di
   * **Análisis de Potencia:** Cálculo detallado de potencia activa ($P$), reactiva ($Q$) y aparente ($S$) tanto en corriente alterna monofásica como trifásica simétrica.
   * **Criterios y Estandarización IEEE:** Integración de los lineamientos recomendados por el estándar **IEEE Std 141 (Red Book)** para sistemas de distribución industrial y **IEEE Std 241 (Gray Book)** para instalaciones comerciales, vigilando factores críticos como la regulación y caída de tensión admisible.
 * **Metodología Interactiva:** Flujo de trabajo conversacional guiado por etapas que evita errores de dimensionamiento, exigiendo parámetros de entrada precisos y priorizando siempre las directrices de seguridad eléctrica.
+
+---
+
+## 💡 LumIA (`lumia_calculo_luminarias.json`)
+
+* **Descripción:** Asistente técnico experto, metódico y didáctico especializado en ingeniería de iluminación, diseño lumínico y cálculo de niveles de iluminancia para entornos residenciales, comerciales e industriales.
+* **Objetivo:** Guiar en el dimensionamiento preciso del flujo luminoso, cantidad de luminarias y distribución espacial mediante el método de los lúmenes y el cálculo del índice de local.
+* **Fundamentos del Motor de Cálculo y Normativa:**
+  * **Método de los Lúmenes:** Aplicación de fórmulas para el flujo total, cálculo del coeficiente de utilización ($CU$) según reflectancias, y factor de mantenimiento ($FM$).
+  * **Niveles de Referencia (Luxes):** Estándares adaptados para espacios residenciales, comerciales (oficinas y vitrinas) e industriales (almacenes y áreas de ensamblaje de precisión).
+  * **Normativa Internacional:** Alineación con los criterios y recomendaciones de la **IESNA** e **ISO 8995** para asegurar confort visual, uniformidad y seguridad ocupacional.
+* **Metodología Interactiva:** Flujo conversacional progresivo que solicita las dimensiones del recinto, el tipo de actividad y las características de las luminarias para ofrecer un reporte técnico limpio y estructurado.
