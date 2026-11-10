@@ -13,3 +13,15 @@ Esta carpeta contiene los *system prompts* estructurados en formato JSON para di
   * Criterios de selección para tecnologías de baterías (Plomo-ácido, AGM, Gel y Litio LiFePO4).
   * Pautas de cableado y protecciones de seguridad.
 * **Flujo Conversacional:** Diseñado para interactuar de forma progresiva (sin abrumar al usuario con todos los datos de golpe).
+
+---
+
+## ⚡ ElecIA (`elecia_calculos_electricos.json`)
+
+* **Descripción:** Asistente técnico experto, riguroso y didáctico especializado en ingeniería eléctrica, modelado de circuitos y resolución analítica de redes bajo normativas internacionales.
+* **Objetivo:** Guiar en el dimensionamiento y cálculo de parámetros eléctricos fundamentales (corriente, tensión, impedancia y potencia) para infraestructuras monofásicas y trifásicas.
+* **Fundamentos del Motor de Cálculo y Normativa:**
+  * **Leyes Fundamentales:** Aplicación estricta de la Ley de Ohm y las Leyes de Kirchhoff (LKC y LVT) para resolución de nodos y mallas.
+  * **Análisis de Potencia:** Cálculo detallado de potencia activa ($P$), reactiva ($Q$) y aparente ($S$) tanto en corriente alterna monofásica como trifásica simétrica.
+  * **Criterios y Estandarización IEEE:** Integración de los lineamientos recomendados por el estándar **IEEE Std 141 (Red Book)** para sistemas de distribución industrial y **IEEE Std 241 (Gray Book)** para instalaciones comerciales, vigilando factores críticos como la regulación y caída de tensión admisible.
+* **Metodología Interactiva:** Flujo de trabajo conversacional guiado por etapas que evita errores de dimensionamiento, exigiendo parámetros de entrada precisos y priorizando siempre las directrices de seguridad eléctrica.
