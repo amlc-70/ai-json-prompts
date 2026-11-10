@@ -34,20 +34,34 @@ ai-json-prompts/
 
 ---
 
+Lista Actualizada
+
+  * `prompts/asistentes/` - Asistentes técnicos especializados en cálculos y dimensionamiento.
+  * `voltia_sistema_fotovoltaico.json` - Experto en sistemas fotovoltaicos y baterías (VoltIA).
+  * `elecia_calculos_electricos.json` - Experto en ingeniería eléctrica y Ley de Ohm/Kirchhoff (ElecIA).
+  * `lumia_calculo_luminarias.json` - Experto en ingeniería de iluminación y método de los lúmenes (LumIA).
+  * `prompts/creatividad/` - Asistentes enfocados en redacción técnica, documentación y gestión del tiempo.
+  * `docu_asistente_tecnico.json` - Experto en redacción de manuales y especificaciones técnicas (DocuIA).
+  * `filofax_asistente_organizacion.json` - Experto en planificación, agendas y sincronización Keep/Calendar (FilofaxIA).
+
+---
+
 ## 🚀 Cómo Utilizar estos Prompts
 
 ---
 
 Puedes utilizar estos archivos JSON directamente en tus desarrollos o integraciones con LLMs mediante un script de carga. Por ejemplo, en **Python**:
 
-# Cargar el system prompt de VoltIA desde el repositorio local
-with open("prompts/asistentes/voltia_sistema_fotovoltaico.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
+# 🤖 ai-json-prompts
 
-system_prompt_content = data["system_prompt"]["rol"]
-print("Asistente cargado:", system_prompt_content)
+Repositorio profesional de *system prompts* estandarizados y modulares en formato JSON para asistentes de IA especializados en ingeniería, arquitectura técnica, documentación y organización personal.
 
-También puedes consumirlos directamente mediante llamadas a la API de OpenAI, Anthropic o modelos locales (Ollama), inyectando el objeto JSON como el mensaje de sistema (`system role`).
+---
+
+## 🚀 Automatización y Control de Calidad
+
+* **Validación CI/CD:** El repositorio incluye flujos de trabajo en **GitHub Actions** (`.github/workflows/validador_json.yml`) que verifican automáticamente la sintaxis JSON en cada `push` o `pull_request`.
+* **Gestor Local:** Cuenta con el script en Python `gestor_asistentes.py` para la detección, carga y consulta dinámica de los perfiles desde la terminal.
 
 ---
 
