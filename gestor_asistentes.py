@@ -2,17 +2,17 @@ import os
 import json
 from pathlib import Path
 
-# Directorio donde se almacenan los asistentes
-ASISTENTES_DIR = Path("prompts/asistentes")
+# Directorio base donde se almacenan las categorías de prompts
+ROOT_PROMPTS_DIR = Path("prompts")
 
 def listar_asistentes():
-    """Escanea la carpeta de asistentes y retorna una lista de archivos JSON encontrados."""
-    if not ASISTENTES_DIR.exists():
-        print(f"[-] El directorio {ASISTENTES_DIR} no existe.")
+    """Escanea recursivamente la carpeta de prompts y retorna una lista de rutas de archivos JSON encontrados."""
+    if not ROOT_PROMPTS_DIR.exists():
+        print(f"[-] El directorio base {ROOT_PROMPTS_DIR} no existe.")
         return []
     
-    # Filtra todos los archivos .json excluyendo los README u otros
-    return list(ASISTENTES_DIR.glob("*.json"))
+    # Busca recursivamente todos los archivos .json dentro de las subcarpetas
+    return list(ROOT_PROMPTS_DIR.rglob("*.json"))
 
 def cargar_asistente(ruta_archivo):
     """Carga y retorna el contenido de un JSON de asistente."""
@@ -24,24 +24,25 @@ def cargar_asistente(ruta_archivo):
         return None
 
 def main():
-    print("=" * 60)
+    print("=" * 65)
     print(" 🤖 GESTOR DINÁMICO DE ASISTENTES IA (ai-json-prompts)")
-    print("=" * 60)
+    print("=" * 65)
     
     archivos = listar_asistentes()
     
     if not archivos:
-        print("No se encontraron asistentes JSON en la ruta especificada.")
+        print("No se encontraron asistentes JSON en las rutas especificadas.")
         return
 
-    print(f"\n[+] Se encontraron {len(archivos)} asistente(s) registrado(s):\n")
+    print(f"\n[+] Se encontraron {len(archivos)} asistente(s) registrado(s) en total:\n")
     
     for idx, archivo in enumerate(archivos, 1):
         datos = cargar_asistente(archivo)
+        categoria = archivo.parent.name
         if datos and "system_prompt" in datos:
             rol = datos["system_prompt"].get("rol", "Sin descripción")
-            print(f"  {idx}. 📄 Archivo: {archivo.name}")
-            print(f"     💡 Rol principal: {rol[:90]}...\n")
+            print(f"  {idx}. 📂 [{categoria.upper()}] 📄 {archivo.name}")
+            print(f"     💡 Rol principal: {rol[:85]}...\n")
 
     # Interacción simple para probar la carga de un asistente específico
     seleccion = input("Introduce el número del asistente que deseas inspeccionar (o presiona Enter para salir): ").strip()
@@ -52,9 +53,9 @@ def main():
             archivo_elegido = archivos[indice]
             datos_elegidos = cargar_asistente(archivo_elegido)
             
-            print("\n" + "=" * 60)
-            print(f" DETALLES TÉCNICOS DEL ASISTENTE: {archivo_elegido.name}")
-            print("=" * 60)
+            print("\n" + "=" * 65)
+            print(f" DETALLES TÉCNICOS: {archivo_elegido.parent.name}/{archivo_elegido.name}")
+            print("=" * 65)
             print(json.dumps(datos_elegidos, indent=4, ensure_ascii=False))
         else:
             print("[-] Número de selección inválido.")
