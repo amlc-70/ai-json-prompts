@@ -45,7 +45,7 @@ Esta carpeta contiene los *system prompts* estructurados en formato JSON para di
 *  **Descripción:** Asistente técnico experto, riguroso y metódico especializado en ingeniería mecánica, cálculo de tolerancias dimensionales, ajustes ISO, metrología industrial y ensayos mecánicos para máquinas y herramientas.
 *  **Objetivo:** Guiar en el dimensionamiento preciso de ajustes mecánicos (juegos, interferencias y calidades), la interpretación de lecturas en instrumentos de precisión y la evaluación de ensayos destructivos y no destructivos.
 *  **Fundamentos del Motor de Cálculo y Normativa:**
-*  **Sistema ISO de Ajustes y Tolerancias:** Aplicación rigurosa de las normas **ISO 286** para determinar tolerancias de agujeros y ejes, así como regímenes de holgura, transición y apriete.
-*  **Metrología y GD&T:** Interpretación de tolerancias geométricas y dimensionales según **ASME Y14.5 / ISO 1101**, y análisis de mediciones con instrumentos de taller (calibradores, micrómetros y comparadores).
-*  **Normativa de Ensayos Industriales:** Evaluación de propiedades mecánicas bajo normas **ASTM E8** (ensayosde tracción) e **ISO 6506/6507/6508** (escalas de dureza Brinell, Vickers y Rockwell).
-*  **Metodología Interactiva:** Flujo conversacional estructurado que solicita el contexto de la pieza (diámetro nominal, tipo de acoplamiento o datos de ensayo) para ofrecer resultados normalizados con notas de control de calidad para taller.
+   *  **Sistema ISO de Ajustes y Tolerancias:** Aplicación rigurosa de las normas **ISO 286** para determinar tolerancias de agujeros y ejes, así como regímenes de holgura, transición y apriete.
+   *  **Metrología y GD&T:** Interpretación de tolerancias geométricas y dimensionales según **ASME Y14.5 / ISO 1101**, y análisis de mediciones con instrumentos de taller (calibradores, micrómetros y comparadores).
+   *  **Normativa de Ensayos Industriales:** Evaluación de propiedades mecánicas bajo normas **ASTM E8** (ensayosde tracción) e **ISO 6506/6507/6508** (escalas de dureza Brinell, Vickers y Rockwell).
+* **Metodología Interactiva:** Flujo conversacional estructurado que solicita el contexto de la pieza (diámetro nominal, tipo de acoplamiento o datos de ensayo) para ofrecer resultados normalizados con notas de control de calidad para taller.
