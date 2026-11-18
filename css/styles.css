@@ -52,6 +52,7 @@ h1 {
 
 /* --- 3. Contenedores y Rejilla Adaptativa --- */
 .container {
+  position: relative;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 6px; /* Márgenes mínimos en móviles para evitar desbordes */
@@ -67,6 +68,7 @@ h1 {
   display: grid;
   gap: 20px;
   margin-bottom: 30px;
+  min-width: 0;
 }
 
 @media screen and (min-width: 0px) {
@@ -178,11 +180,13 @@ section#asistentes .btn-3d {
   border-radius: var(--radius);
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   color: var(--dark);
-  max-width: 100%;
+  width: 100%;
+  min-width: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   transition: var(--transition);
+  word-break: break-word;
 }
 
 .card:hover {

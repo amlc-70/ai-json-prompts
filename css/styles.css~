@@ -1,0 +1,448 @@
+/* =================================================================ati
+   AI JSON Prompts - Estilos CSS (Inspirado en Bulma + CSS Moderno)
+   Autor: amlc-70
+   ================================================================ */
+
+/* --- 1. Importación de Tipografías de Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* --- 2. Variables Globales y Reset --- */
+:root {
+  --primary: #3273dc;
+  --primary-hover: #276cda;
+  --success: #23d160;
+  --danger: #ff3860;
+  --dark: #363636;
+  --light: #f5f5f5;
+  --white: #ffffff;
+  --border: #dbdbdb;
+  --text: #4a4a4a;
+  --shadow-3d: 0 4px 0 #20529b, 0 6px 12px rgba(0, 0, 0, 0.15);
+  --shadow-3d-active: 0 1px 0 #20529b, 0 2px 4px rgba(0, 0, 0, 0.15);
+  --radius: 6px;
+  --transition: all 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.5;
+  padding: 5px; /* Margen mínimo general para aprovechar toda la pantalla */
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Párrafos justificados y H1 centrados */
+p {
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* --- 3. Contenedores y Rejilla Adaptativa --- */
+.container {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 6px; /* Márgenes mínimos en móviles para evitar desbordes */
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 0px) {
+  .grid { grid-template-columns: repeat(1, 1fr); }
+}
+@media screen and (min-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media screen and (min-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media screen and (min-width: 1280px) {
+  .grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* --- 3.1 Navbar y Menú Hamburguesa Adaptativo --- */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Botón de Hamburguesa (Oculto en escritorio) */
+.navbar-burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 21px;
+}
+
+.navbar-burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--dark);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Estilos responsive para pantallas móviles y tablets (< 768px) */
+@media screen and (max-width: 767px) {
+  .navbar-burger {
+    display: flex;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border);
+    gap: 15px;
+    align-items: flex-start;
+    z-index: 1000;
+  }
+
+  .navbar-menu.is-active {
+    display: flex;
+  }
+}
+
+/* --- 3.2 Corrección de Botones de Filtro en Móviles --- */
+/* Permite que los botones de filtro se ajusten y pasen a la siguiente línea si no caben */
+section#asistentes .btn-3d {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+}
+
+@media screen and (max-width: 767px) {
+  section#asistentes div[style*="display: flex"] {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+  
+  section#asistentes div[style*="display: flex"] > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  section#asistentes div[style*="display: flex"] > div .btn-3d {
+    flex: 1 1 calc(50% - 5px);
+    text-align: center;
+    margin-right: 0 !important;
+  }
+}
+
+/* --- 4. Tarjetas Estilo Bulma --- */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  color: var(--dark);
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(10, 10, 10, 0.15), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.card-header {
+  background-color: transparent;
+  align-items: stretch;
+  display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-header-title {
+  align-items: center;
+  color: var(--dark);
+  display: flex;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-footer {
+  border-top: 1px solid var(--border);
+  display: flex;
+}
+
+.card-footer-item {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+/* --- 5. Botones y Referencias 3D --- */
+.btn-3d {
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  box-shadow: var(--shadow-3d);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  position: relative;
+  top: 0;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-3d:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-3d:active {
+  top: 3px;
+  box-shadow: var(--shadow-3d-active);
+}
+
+/* --- 6. Formulario con Referencias 3D --- */
+.form-container {
+  background: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark);
+}
+
+.control {
+  position: relative;
+}
+
+.input-3d, .textarea-3d {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: var(--transition);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.input-3d:focus, .textarea-3d:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px rgba(50, 115, 220, 0.2), inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.textarea-3d {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --- 7. Modal Adaptativo --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.modal.is-active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: var(--radius);
+  width: 95%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: modalPop 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes modalPop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* --- 8. Carrusel de Imágenes --- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  max-width: 100%;
+  background: #000;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- 9. Reproductores Multimedia (Video y Audio) --- */
+.media-player-wrapper {
+  background: var(--white);
+  padding: 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+video, audio {
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+}
+
+audio {
+  height: 40px;
+}
+
+/* --- 10. Listas Ordenadas Estilizadas --- */
+ol.styled-list {
+  list-style: none;
+  counter-reset: item;
+  padding-left: 0;
+}
+
+ol.styled-list li {
+  counter-increment: item;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 35px;
+}
+
+ol.styled-list li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- 11. Tablas Responsive --- */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+}
