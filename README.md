@@ -40,6 +40,7 @@ Lista Actualizada
   * `voltia_sistema_fotovoltaico.json` - Experto en sistemas fotovoltaicos y baterías (VoltIA).
   * `elecia_calculos_electricos.json` - Experto en ingeniería eléctrica y Ley de Ohm/Kirchhoff (ElecIA).
   * `lumia_calculo_luminarias.json` - Experto en ingeniería de iluminación y método de los lúmenes (LumIA).
+  * `tolerancias_y_mecanica.json` - Experto en cálculo de tolerancias, ajustes ISO, metrología y ensayos mecánicos industriales (ToleIA).
 * `prompts/creatividad/` - Asistentes enfocados en redacción técnica, documentación y gestión del tiempo.
   * `docu_asistente_tecnico.json` - Experto en redacción de manuales y especificaciones técnicas (DocuIA).
   * `filofax_asistente_organizacion.json` - Experto en planificación, agendas y sincronización Keep/Calendar (FilofaxIA).
