@@ -309,9 +309,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Reemplaza estos valores con tus IDs públicos de EmailJS
   const EMAILJS_CONFIG = {
-    publicKey: "TU_PUBLIC_KEY",
-    serviceID: "TU_SERVICE_ID",
-    templateID: "TU_TEMPLATE_ID"
+    publicKey: "Hjaj_U36r5zOGKDKY",
+    serviceID: "service_akqz39w",
+    templateID: "template_o5pdh1q"
   };
 
   if (typeof emailjs !== "undefined" && EMAILJS_CONFIG.publicKey !== "TU_PUBLIC_KEY") {
